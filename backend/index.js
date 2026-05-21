@@ -16,6 +16,9 @@ const orderRoutes = require("./routes/orderRoutes");
 const PORT = process.env.PORT || 3002;
 const app = express();
 
+// Trust proxy to allow secure cookies behind reverse proxies (like Render)
+app.set("trust proxy", 1);
+
 const allowedOrigins = [
     "http://localhost:3000",
     "http://localhost:3001",

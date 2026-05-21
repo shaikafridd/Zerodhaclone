@@ -13,10 +13,13 @@ exports.signup = async (req, res) => {
         const user = new UserModel({ username, email, password: hashedPassword });
         await user.save();
 
+        const isProduction = process.env.NODE_ENV === "production";
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "7d" });
         res.cookie("token", token, {
             httpOnly: true,
             maxAge: 7 * 24 * 60 * 60 * 1000,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax",
         });
 
         res.json({ message: "Signup successful", success: true });
@@ -34,10 +37,13 @@ exports.login = async (req, res) => {
         const isValid = await bcrypt.compare(password, user.password);
         if (!isValid) return res.status(401).json({ message: "Invalid credentials", success: false });
 
+        const isProduction = process.env.NODE_ENV === "production";
         const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "7d" });
         res.cookie("token", token, {
             httpOnly: true,
             maxAge: 7 * 24 * 60 * 60 * 1000,
+            secure: isProduction,
+            sameSite: isProduction ? "none" : "lax",
         });
 
         res.json({ message: "Login successful", success: true });
@@ -47,7 +53,12 @@ exports.login = async (req, res) => {
 };
 
 exports.logout = (req, res) => {
-    res.clearCookie("token");
+    const isProduction = process.env.NODE_ENV === "production";
+    res.clearCookie("token", {
+        httpOnly: true,
+        secure: isProduction,
+        sameSite: isProduction ? "none" : "lax",
+    });
     res.json({ message: "Logged out", success: true });
 };
 
