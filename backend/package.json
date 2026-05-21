@@ -7,7 +7,14 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "jest --runInBand --detectOpenHandles"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -23,5 +30,10 @@
     "passport-local": "^1.0.0",
     "passport-local-mongoose": "^9.1.0",
     "yahoo-finance2": "^3.14.1"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "mongodb-memory-server": "^11.1.0",
+    "supertest": "^7.2.2"
   }
 }

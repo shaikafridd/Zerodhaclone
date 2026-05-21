@@ -1,7 +1,6 @@
 const { HoldingsModel } = require("../models/HoldingsModel");
 const { PositionsModel } = require("../models/PositionsModel");
-const YahooFinance = require("yahoo-finance2").default;
-const yf = new YahooFinance();
+const { getCachedQuotes } = require("../utils/cache");
 
 exports.allHoldings = async (req, res) => {
     try {
@@ -27,7 +26,7 @@ exports.allHoldings = async (req, res) => {
         const symbols = allHoldings.map(stock => `${stock.name}.NS`);
         if (symbols.length > 0) {
             try {
-                const quotes = await yf.quote(symbols);
+                const quotes = await getCachedQuotes(symbols);
                 allHoldings = allHoldings.map(stock => {
                     const quote = quotes.find(q => q.symbol === `${stock.name}.NS`);
                     if (quote) {
@@ -74,7 +73,7 @@ exports.allPositions = async (req, res) => {
         const symbols = allPositions.map(stock => `${stock.name}.NS`);
         if (symbols.length > 0) {
             try {
-                const quotes = await yf.quote(symbols);
+                const quotes = await getCachedQuotes(symbols);
                 allPositions = allPositions.map(stock => {
                     const quote = quotes.find(q => q.symbol === `${stock.name}.NS`);
                     if (quote) {
@@ -98,7 +97,7 @@ exports.allPositions = async (req, res) => {
 
 exports.indexIndices = async (req, res) => {
     try {
-        const quotes = await yf.quote(["^NSEI", "^BSESN"]);
+        const quotes = await getCachedQuotes(["^NSEI", "^BSESN"]);
         const indices = quotes.map(quote => ({
             name: quote.symbol === "^NSEI" ? "NIFTY 50" : "SENSEX",
             price: (quote.regularMarketPrice || 0).toLocaleString("en-IN", { minimumFractionDigits: 2 }),

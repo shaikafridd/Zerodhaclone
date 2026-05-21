@@ -33,8 +33,12 @@ app.use("/", portfolioRoutes);
 app.use("/", orderRoutes);
 
 // Start Database and Server
-connectDB().then(() => {
-    app.listen(PORT, () => {
-        console.log(`Server started on port ${PORT} in MVC mode`);
+if (process.env.NODE_ENV !== 'test') {
+    connectDB().then(() => {
+        app.listen(PORT, () => {
+            console.log(`Server started on port ${PORT} in MVC mode`);
+        });
     });
-});
+}
+
+module.exports = app;

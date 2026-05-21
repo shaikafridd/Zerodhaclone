@@ -1,6 +1,5 @@
 const { UserModel } = require("../models/UserModel");
-const YahooFinance = require("yahoo-finance2").default;
-const yf = new YahooFinance();
+const { getCachedQuotes, yf } = require("../utils/cache");
 
 exports.searchSymbol = async (req, res) => {
     try {
@@ -77,12 +76,12 @@ exports.getWatchlist = async (req, res) => {
 
         let quotes = [];
         try {
-            quotes = await yf.quote(userWatchlist);
+            quotes = await getCachedQuotes(userWatchlist);
         } catch (quoteErr) {
             console.error("Yahoo Finance quote fetch error, trying individual symbols:", quoteErr);
             for (const sym of userWatchlist) {
                 try {
-                    const q = await yf.quote(sym);
+                    const q = await getCachedQuotes(sym);
                     if (q) quotes.push(q);
                 } catch (e) {
                     // Ignore symbol error
