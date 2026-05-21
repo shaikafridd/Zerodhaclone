@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const BuyActionWindow = () => {
   const [stockQuantity, setStockQuantity] = useState(1);
@@ -45,7 +46,7 @@ const BuyActionWindow = () => {
     setError(""); // clear previous errors
 
     try {
-      await axios.post("http://localhost:3002/newOrder", {
+      await axios.post(`${API_URL}/newOrder`, {
         name: selectedStock?.name || selectedStock,
         qty: qty,
         price: price,

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { DASHBOARD_URL } from './config';
 
 function Navbar() {
     return (
@@ -26,7 +27,7 @@ function Navbar() {
                             <Link className="nav-link" to="/support">Support</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="btn btn-primary nav-cta-btn" href="http://localhost:3001/login">Login / Signup</a>
+                            <a className="btn btn-primary nav-cta-btn" href={`${DASHBOARD_URL}/login`}>Login / Signup</a>
                         </li>
                     </ul>
                 </div>

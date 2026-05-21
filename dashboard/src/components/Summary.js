@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from "react";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const Summary = () => {
   const { user, refetchTrigger } = useContext(GeneralContext);
@@ -17,10 +18,10 @@ const Summary = () => {
   useEffect(() => {
     const fetchSummaryData = async () => {
       try {
-        const holdingsRes = await axios.get("http://localhost:3002/allHoldings");
+        const holdingsRes = await axios.get(`${API_URL}/allHoldings`);
         setHoldings(holdingsRes.data);
 
-        const positionsRes = await axios.get("http://localhost:3002/allPositions");
+        const positionsRes = await axios.get(`${API_URL}/allPositions`);
         setPositions(positionsRes.data);
       } catch (err) {
         console.error("Error fetching summary data:", err);

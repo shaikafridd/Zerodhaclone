@@ -6,6 +6,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import ShowChartIcon from "@mui/icons-material/ShowChart";
 import ReceiptLongIcon from "@mui/icons-material/ReceiptLong";
+import { API_URL } from "../config";
 
 const Profile = () => {
   const { user, refetchTrigger } = useContext(GeneralContext);
@@ -16,13 +17,13 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfileData = async () => {
       try {
-        const holdingsRes = await axios.get("http://localhost:3002/allHoldings");
+        const holdingsRes = await axios.get(`${API_URL}/allHoldings`);
         setHoldings(holdingsRes.data);
 
-        const positionsRes = await axios.get("http://localhost:3002/allPositions");
+        const positionsRes = await axios.get(`${API_URL}/allPositions`);
         setPositions(positionsRes.data);
 
-        const ordersRes = await axios.get("http://localhost:3002/allOrders");
+        const ordersRes = await axios.get(`${API_URL}/allOrders`);
         setOrders(ordersRes.data);
       } catch (err) {
         console.error("Error fetching profile data:", err);

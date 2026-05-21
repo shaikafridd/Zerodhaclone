@@ -2,8 +2,12 @@ const YahooFinance = require("yahoo-finance2").default;
 const yf = new YahooFinance();
 
 // Simple in-memory cache for stock quotes to prevent redundant external API hits
-const cache = {};
+let cache = {};
 const CACHE_TTL = 10000; // 10 seconds cache time-to-live
+
+function clearCache() {
+  cache = {};
+}
 
 /**
  * Fetches stock quotes via cache or Yahoo Finance API.
@@ -75,5 +79,6 @@ async function getCachedQuotes(symbols) {
 
 module.exports = {
   getCachedQuotes,
-  yf // export the underlying instance in case it is needed elsewhere
+  yf,
+  clearCache
 };

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Menu from "./Menu";
+import { API_URL } from "../config";
 
 const TopBar = () => {
   const [indices, setIndices] = useState([
@@ -11,7 +12,7 @@ const TopBar = () => {
   useEffect(() => {
     const fetchIndices = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/indexIndices");
+        const response = await axios.get(`${API_URL}/indexIndices`);
         setIndices(response.data);
       } catch (err) {
         console.error("Error fetching indices:", err);

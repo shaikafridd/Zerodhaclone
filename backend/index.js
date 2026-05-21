@@ -16,9 +16,15 @@ const orderRoutes = require("./routes/orderRoutes");
 const PORT = process.env.PORT || 3002;
 const app = express();
 
-// Middleware
+const allowedOrigins = [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    process.env.FRONTEND_URL,
+    process.env.DASHBOARD_URL
+].filter(Boolean);
+
 app.use(cors({
-    origin: ["http://localhost:3000", "http://localhost:3001"],
+    origin: allowedOrigins,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));

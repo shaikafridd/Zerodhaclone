@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "../config";
 
 const Login = () => {
   const location = useLocation();
@@ -27,7 +28,7 @@ const Login = () => {
 
     try {
       if (isSignup) {
-        const res = await axios.post("http://localhost:3002/signup", {
+        const res = await axios.post(`${API_URL}/signup`, {
           username,
           email,
           password,
@@ -36,7 +37,7 @@ const Login = () => {
           navigate("/");
         }
       } else {
-        const res = await axios.post("http://localhost:3002/login", {
+        const res = await axios.post(`${API_URL}/login`, {
           email,
           password,
         });

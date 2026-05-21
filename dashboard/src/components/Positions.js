@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const Positions = () => {
   const [allPositions, setAllPositions] = useState([]);
@@ -9,7 +10,7 @@ const Positions = () => {
   useEffect(() => {
     const fetchPositions = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/allPositions");
+        const response = await axios.get(`${API_URL}/allPositions`);
         setAllPositions(response.data);
       } catch (err) {
         console.error("Error fetching positions:", err);

@@ -10,6 +10,7 @@ import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import DeleteIcon from "@mui/icons-material/Delete";
 import GeneralContext from "./GeneralContext";
 import DoughnutChart from "./DoughnutChart";
+import { API_URL } from "../config";
 
 const WatchList = ({ isDrawerOpen }) => {
   const [watchlistData, setWatchlistData] = useState([]);
@@ -50,7 +51,7 @@ const WatchList = ({ isDrawerOpen }) => {
         return;
       }
       try {
-        const response = await axios.get(`http://localhost:3002/searchSymbol?q=${searchQuery}`);
+        const response = await axios.get(`${API_URL}/searchSymbol?q=${searchQuery}`);
         setSearchResults(response.data);
       } catch (err) {
         console.error("Error searching symbol:", err);
@@ -68,7 +69,7 @@ const WatchList = ({ isDrawerOpen }) => {
   useEffect(() => {
     const fetchWatchlist = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/watchlist");
+        const response = await axios.get(`${API_URL}/watchlist`);
         setWatchlistData(response.data);
       } catch (err) {
         console.error("Error fetching live watchlist data", err);
@@ -80,7 +81,7 @@ const WatchList = ({ isDrawerOpen }) => {
 
   const handleAddToWatchlist = async (symbol) => {
     try {
-      await axios.post("http://localhost:3002/watchlist/add", { symbol });
+      await axios.post(`${API_URL}/watchlist/add`, { symbol });
       setSearchQuery("");
       setSearchResults([]);
       setWatchlistUpdated(prev => prev + 1);
@@ -92,7 +93,7 @@ const WatchList = ({ isDrawerOpen }) => {
   const handleRemoveFromWatchlist = async (stock) => {
     try {
       const fullSymbol = stock.symbol || `${stock.name}.NS`;
-      await axios.post("http://localhost:3002/watchlist/remove", { symbol: fullSymbol });
+      await axios.post(`${API_URL}/watchlist/remove`, { symbol: fullSymbol });
       setWatchlistUpdated(prev => prev + 1);
     } catch (err) {
       console.error("Error removing from watchlist:", err);

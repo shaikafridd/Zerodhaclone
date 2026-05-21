@@ -2,6 +2,7 @@ const request = require('supertest');
 const app = require('../index');
 const { UserModel } = require('../models/UserModel');
 const bcrypt = require('bcrypt');
+const { clearCache } = require('../utils/cache');
 
 jest.mock('yahoo-finance2', () => {
     const search = jest.fn();
@@ -32,6 +33,7 @@ describe('Watchlist Endpoints', () => {
     beforeEach(async () => {
         await UserModel.deleteMany({});
         jest.clearAllMocks();
+        clearCache();
 
         // Create and login user
         const hashedPassword = await bcrypt.hash(testUser.password, 10);

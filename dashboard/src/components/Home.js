@@ -4,6 +4,7 @@ import axios from "axios";
 import TopBar from "./TopBar";
 import Dashboard from "./Dashboard";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ const Home = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/auth/status");
+        const response = await axios.get(`${API_URL}/auth/status`);
         if (response.data.success) {
           setUser(response.data.user);
           setIsAuthenticated(true);

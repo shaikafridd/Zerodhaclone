@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const Orders = () => {
   const [allOrders, setAllOrders] = useState([]);
@@ -10,7 +11,7 @@ const Orders = () => {
   useEffect(() => {
     const fetchOrders = async () => {
       try {
-        const response = await axios.get("http://localhost:3002/allOrders");
+        const response = await axios.get(`${API_URL}/allOrders`);
         setAllOrders(response.data);
       } catch (err) {
         console.error("Error fetching orders:", err);

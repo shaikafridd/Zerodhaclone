@@ -5,6 +5,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState("dashboard");
@@ -27,7 +28,7 @@ const Menu = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post("http://localhost:3002/logout");
+      await axios.post(`${API_URL}/logout`);
       setUser(null);
       navigate("/login");
     } catch (err) {

@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import axios from "axios";
 import GeneralContext from "./GeneralContext";
+import { API_URL } from "../config";
 
 const Funds = () => {
   const { user, setUser } = useContext(GeneralContext);
@@ -31,7 +32,7 @@ const Funds = () => {
     const endpoint = modalType === "add" ? "/addFunds" : "/withdrawFunds";
 
     try {
-      const response = await axios.post(`http://localhost:3002${endpoint}`, {
+      const response = await axios.post(`${API_URL}${endpoint}`, {
         amount: numAmount,
       });
 
