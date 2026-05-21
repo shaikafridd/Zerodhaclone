@@ -37,7 +37,7 @@ const TopBar = () => {
           <p className="index-points">{sensex.price} <span className={sensex.isDown ? "down" : "up"}>{sensex.change}</span></p>
         </div>
       </div>
-      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+      <div className="topbar-menu-wrapper" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
         <Menu />
       </div>
     </div>

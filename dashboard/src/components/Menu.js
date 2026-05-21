@@ -2,11 +2,14 @@ import React, { useState, useEffect, useRef, useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import GeneralContext from "./GeneralContext";
 
 const Menu = () => {
   const [selectedMenu, setSelectedMenu] = useState("dashboard");
   const [isProfileDropdownOpen, setIsProfileDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
   
   const { user, setUser } = useContext(GeneralContext);
@@ -50,35 +53,44 @@ const Menu = () => {
   return (
     <div className="menu-container">
       <img src="https://kite.zerodha.com/static/images/kite-logo.svg" alt="logo" className="logo" />
-      <div className="menus">
+      
+      <button 
+        className="mobile-hamburger-btn" 
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle Navigation"
+      >
+        {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
+      </button>
+
+      <div className={`menus ${isMobileMenuOpen ? "mobile-open" : ""}`}>
         <ul>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/" onClick={() => setSelectedMenu("dashboard")}>
+            <Link style={{ textDecoration: "none" }} to="/" onClick={() => { setSelectedMenu("dashboard"); setIsMobileMenuOpen(false); }}>
               <p className={selectedMenu === "dashboard" ? "menu selected" : "menu"}>Dashboard</p>
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/orders" onClick={() => setSelectedMenu("orders")}>
+            <Link style={{ textDecoration: "none" }} to="/orders" onClick={() => { setSelectedMenu("orders"); setIsMobileMenuOpen(false); }}>
               <p className={selectedMenu === "orders" ? "menu selected" : "menu"}>Orders</p>
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/holdings" onClick={() => setSelectedMenu("holdings")}>
+            <Link style={{ textDecoration: "none" }} to="/holdings" onClick={() => { setSelectedMenu("holdings"); setIsMobileMenuOpen(false); }}>
               <p className={selectedMenu === "holdings" ? "menu selected" : "menu"}>Holdings</p>
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/positions" onClick={() => setSelectedMenu("positions")}>
+            <Link style={{ textDecoration: "none" }} to="/positions" onClick={() => { setSelectedMenu("positions"); setIsMobileMenuOpen(false); }}>
               <p className={selectedMenu === "positions" ? "menu selected" : "menu"}>Positions</p>
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/funds" onClick={() => setSelectedMenu("funds")}>
+            <Link style={{ textDecoration: "none" }} to="/funds" onClick={() => { setSelectedMenu("funds"); setIsMobileMenuOpen(false); }}>
               <p className={selectedMenu === "funds" ? "menu selected" : "menu"}>Funds</p>
             </Link>
           </li>
           <li>
-            <Link style={{ textDecoration: "none" }} to="/apps" onClick={() => setSelectedMenu("apps")}>
+            <Link style={{ textDecoration: "none" }} to="/apps" onClick={() => { setSelectedMenu("apps"); setIsMobileMenuOpen(false); }}>
               <p className={selectedMenu === "apps" ? "menu selected" : "menu"}>Apps</p>
             </Link>
           </li>

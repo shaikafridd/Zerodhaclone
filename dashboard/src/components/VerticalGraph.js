@@ -105,12 +105,7 @@ const VerticalGraph = ({ data }) => {
   };
 
   return (
-    <div style={{ 
-      marginTop: '50px', 
-      padding: '30px', 
-      background: 'white', 
-      height: '450px'
-    }}>
+    <div className="vertical-graph-container">
       {data.length > 0 ? (
         <Bar options={options} data={chartData} />
       ) : (

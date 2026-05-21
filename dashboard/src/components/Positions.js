@@ -28,6 +28,7 @@ const Positions = () => {
           <p>You don't have any open positions</p>
         </div>
       ) : (
+      <div className="table-wrapper">
         <table className="data-table">
           <thead>
             <tr>
@@ -59,6 +60,7 @@ const Positions = () => {
             })}
           </tbody>
         </table>
+      </div>
       )}
     </div>
   );

@@ -4,7 +4,7 @@ import { Doughnut } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DoughnutChart = ({ data }) => {
+const DoughnutChart = ({ data, isDrawerOpen }) => {
   const chartData = {
     labels: data.map((stock) => stock.name),
     datasets: [
@@ -63,10 +63,10 @@ const DoughnutChart = ({ data }) => {
   };
 
   return (
-    <div className="doughnut-container" style={{ padding: '30px 20px', borderTop: '1px solid #eee', backgroundColor: '#fff', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <div style={{ position: 'relative', width: '100%', height: '350px', display: 'flex', justifyContent: 'center' }}>
+    <div className="doughnut-chart-container">
+      <div className="doughnut-chart-wrapper">
         {data.length > 0 ? (
-          <Doughnut data={chartData} options={options} />
+          <Doughnut key={isDrawerOpen ? "open" : "closed"} data={chartData} options={options} />
         ) : (
           <div style={{ color: '#aaa', fontSize: '12px', marginTop: '50%' }}>Loading chart...</div>
         )}

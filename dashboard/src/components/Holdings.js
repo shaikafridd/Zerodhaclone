@@ -60,40 +60,42 @@ const Holdings = () => {
         </div>
       </div>
 
-      <table className="data-table">
-        <thead>
-          <tr>
-            <th>Instrument</th>
-            <th>Qty.</th>
-            <th>Avg. cost</th>
-            <th>LTP</th>
-            <th>Cur. val</th>
-            <th>P&L</th>
-            <th>Net chg.</th>
-            <th>Day chg.</th>
-          </tr>
-        </thead>
-        <tbody>
-          {allHoldings.map((stock, index) => {
-            const curValue = stock.qty * stock.price;
-            const pnl = (stock.price - stock.avg) * stock.qty;
-            const isProfit = stock.price >= stock.avg;
-            
-            return (
-              <tr key={index}>
-                <td>{stock.name}</td>
-                <td>{stock.qty}</td>
-                <td>{stock.avg.toFixed(2)}</td>
-                <td>{stock.price.toFixed(2)}</td>
-                <td>{curValue.toFixed(2)}</td>
-                <td className={isProfit ? "up" : "down"}>{pnl.toFixed(2)}</td>
-                <td className={isProfit ? "up" : "down"}>{stock.net}</td>
-                <td className={stock.isLoss ? "down" : "up"}>{stock.day}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+      <div className="table-wrapper">
+        <table className="data-table">
+          <thead>
+            <tr>
+              <th>Instrument</th>
+              <th>Qty.</th>
+              <th>Avg. cost</th>
+              <th>LTP</th>
+              <th>Cur. val</th>
+              <th>P&L</th>
+              <th>Net chg.</th>
+              <th>Day chg.</th>
+            </tr>
+          </thead>
+          <tbody>
+            {allHoldings.map((stock, index) => {
+              const curValue = stock.qty * stock.price;
+              const pnl = (stock.price - stock.avg) * stock.qty;
+              const isProfit = stock.price >= stock.avg;
+              
+              return (
+                <tr key={index}>
+                  <td>{stock.name}</td>
+                  <td>{stock.qty}</td>
+                  <td>{stock.avg.toFixed(2)}</td>
+                  <td>{stock.price.toFixed(2)}</td>
+                  <td>{curValue.toFixed(2)}</td>
+                  <td className={isProfit ? "up" : "down"}>{pnl.toFixed(2)}</td>
+                  <td className={isProfit ? "up" : "down"}>{stock.net}</td>
+                  <td className={stock.isLoss ? "down" : "up"}>{stock.day}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
       
       {allHoldings.length > 0 && <VerticalGraph data={allHoldings} />}
     </div>

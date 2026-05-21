@@ -11,7 +11,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import GeneralContext from "./GeneralContext";
 import DoughnutChart from "./DoughnutChart";
 
-const WatchList = () => {
+const WatchList = ({ isDrawerOpen }) => {
   const [watchlistData, setWatchlistData] = useState([]);
   const [favorites, setFavorites] = useState(() => {
     const saved = localStorage.getItem("watchlist_favorites");
@@ -187,7 +187,7 @@ const WatchList = () => {
           );
         })}
         <li ref={doughnutChartRef} style={{ listStyle: "none" }}>
-          <DoughnutChart data={watchlistData} />
+          <DoughnutChart data={watchlistData} isDrawerOpen={isDrawerOpen} />
         </li>
       </ul>
     </div>
