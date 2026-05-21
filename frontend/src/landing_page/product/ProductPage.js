@@ -8,15 +8,17 @@ function ProductPage() {
     return (
         <>
             <Hero />
-            <Leftimage 
-                imageURL="media/images/kite.png" 
-                productName="Kite" 
-                productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices." 
-                tryDemo="#" 
-                learnMore="#" 
-                googlePlay="#" 
-                appStore="#" 
-            />
+            <div id="products">
+                <Leftimage 
+                    imageURL="media/images/kite.png" 
+                    productName="Kite" 
+                    productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices." 
+                    tryDemo="#" 
+                    learnMore="#" 
+                    googlePlay="#" 
+                    appStore="#" 
+                />
+            </div>
             <Rightimage 
                 imageURL="media/images/console.png" 
                 productName="Console" 
@@ -47,7 +49,7 @@ function ProductPage() {
                 googlePlay="#" 
                 appStore="#" 
             />
-            <p className='text-center mt-5 mb-5 fs-4'>Want to know more about our technology stack? Check out the <a href="#" style={{textDecoration:"none"}}>Zerodha.tech</a> blog.</p>
+            <p className='text-center mt-5 mb-5 fs-4'>Want to know more about our technology stack? Check out the <a href="https://zerodha.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration:"none"}}>Zerodha.tech</a> blog.</p>
             <Universe />
         </>
     );

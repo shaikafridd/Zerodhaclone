@@ -17,7 +17,7 @@ function Team() {
                     <p>He is a member of the SEBI Secondary Market Advisory Committee (SMAC) and the Market Data Advisory Committee (MDAC).</p>
                     <p>Playing basketball is his zen.</p>
                     <p className='mt-4'>
-                        <a href="#" className='me-4' style={{textDecoration:"none", color:"#387ed1"}}>Connect on Homepage / TradingQnA / Twitter</a>
+                        <a href="https://nithinkamath.me" target="_blank" rel="noopener noreferrer" className='me-4' style={{textDecoration:"none", color:"#387ed1"}}>Connect on Homepage / TradingQnA / Twitter</a>
                     </p>
                 </div>
             </div>
