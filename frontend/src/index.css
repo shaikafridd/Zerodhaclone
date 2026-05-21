@@ -131,3 +131,77 @@ footer p {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0,0,0,0.08);
 }
+
+/* ==========================================
+   PREMIUM STYLING & MICRO-INTERACTIONS
+   ========================================== */
+
+/* Sleek Modern Custom Scrollbar for Landing Page */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Premium Typography rendering & smooth selections */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: rgba(56, 126, 209, 0.2);
+  color: #1e293b;
+}
+
+/* Button & Card Micro-Animations */
+.btn {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn:hover {
+  transform: translateY(-1.5px);
+  box-shadow: 0 6px 15px rgba(56, 126, 209, 0.25) !important;
+}
+
+.btn:active {
+  transform: translateY(0) scale(0.98) !important;
+}
+
+/* Navbar item link elegant active line */
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #387ed1;
+  transition: width 0.25s ease-in-out;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Image scaling animations for attractive products */
+.img-fluid {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.img-fluid:hover {
+  transform: scale(1.02);
+}
