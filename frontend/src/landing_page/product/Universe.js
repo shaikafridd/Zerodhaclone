@@ -4,7 +4,7 @@ function Universe() {
     return (
         <div className='container mt-5 p-3 p-md-5 text-center'>
             <div className='row mb-5'>
-                <h1 className='fs-2 fw-semibold'>The Echo Universe</h1>
+                <h1 className='fs-2 fw-semibold'>The Aero Universe</h1>
                 <p className='text-muted mt-3 fs-5'>Extend your trading and investment experience even further, with our partner platforms</p>
             </div>
             
@@ -22,7 +22,7 @@ function Universe() {
                     <p className='fs-6'>Options trading platform<br/>that lets you create strategies,<br/>analyze options, and trade.</p>
                 </div>
                 <div className='col-12 col-sm-6 col-md-4 p-3'>
-                    <img src='media/images/zerodhaFundhouse.png' style={{width: "180px"}} alt='Echo Fundhouse' className='mb-3' />
+                    <img src='media/images/zerodhaFundhouse.png' style={{width: "180px"}} alt='Aero Fundhouse' className='mb-3' />
                     <p className='fs-6'>Our asset management venture<br/>that is creating simple and transparent<br/>index funds to help you save for your goals.</p>
                 </div>
                 <div className='col-12 col-sm-6 col-md-4 p-3'>

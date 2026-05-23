@@ -1,6 +1,6 @@
-# 📈 Echo - Full-Stack Stock Trading Platform
+# 📈 Aero - Full-Stack Stock Trading Platform
 
-A fully functional, responsive full-stack replica of **Echo** (Online trading and investing platform), featuring the marketing landing pages, an interactive trading dashboard (Echo platform), and a robust backend API server.
+A fully functional, responsive full-stack replica of **Aero** (Online trading and investing platform), featuring the marketing landing pages, an interactive trading dashboard (Aero platform), and a robust backend API server.
 
 ---
 
@@ -9,9 +9,9 @@ A fully functional, responsive full-stack replica of **Echo** (Online trading an
 This project is organized as a monorepo consisting of three core modules:
 
 ```text
-Echo/
-├── frontend/        # Marketing & Informational Website (Echo Main Website)
-├── dashboard/       # Interactive Trading Platform (Echo Dashboard)
+Aero/
+├── frontend/        # Marketing & Informational Website (Aero Main Website)
+├── dashboard/       # Interactive Trading Platform (Aero Dashboard)
 ├── backend/         # Express.js & MongoDB Server (REST API, DB Models, Authentication)
 └── index.js         # Core entry points and helper configuration
 ```
@@ -22,11 +22,11 @@ Echo/
 
 ### 💻 1. Frontend (Marketing Portal)
 * **Pixel-Perfect Home Page**: Showcasing awards, stats, and simple equity structures.
-* **Product & Pricing Showcases**: Dedicated layouts highlighting Echo, Echo Console, Echo Coin, and brokerage rates ($0$ for equity delivery).
+* **Product & Pricing Showcases**: Dedicated layouts highlighting Aero, Aero Console, Aero Coin, and brokerage rates ($0$ for equity delivery).
 * **Support Ticket Simulator**: Interactive support page mimicking ticket queries.
 * **Auth Flow Integration**: Custom signup and login navigation.
 
-### 📊 2. Dashboard (Echo Platform)
+### 📊 2. Dashboard (Aero Platform)
 * **Interactive Watchlist**: Real-time stock prices, state-aware buy/sell action windows, and sorting.
 * **Portfolio Holdings**: Doughnut Chart visualizations (`chart.js`) representing equity distributions and profit/loss calculations.
 * **Active Positions**: Intraday tracking of open positions with live profit & loss calculations.
@@ -110,7 +110,7 @@ npm start
 ---
 
 ## 🎨 Design & Aesthetics
-* Styled using sleek, high-contrast, cohesive color schemes mirroring Echo's signature typography and brand presence.
+* Styled using sleek, high-contrast, cohesive color schemes mirroring Aero's signature typography and brand presence.
 * Responsive layouts built from scratch utilizing fluid Flexbox/Grid CSS properties.
 * Interactive transitions and modal animation windows for trade actions.
 

@@ -105,9 +105,9 @@ const Menu = () => {
             <div className="profile-dropdown">
               <ul>
                 <li><p className="dropdown-item" onClick={handleProfileMenuClick}>My profile / Settings</p></li>
-                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://console.echo.com", "_blank"); }}>Console</p></li>
-                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://coin.echo.com", "_blank"); }}>Coin</p></li>
-                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://support.echo.com", "_blank"); }}>Support</p></li>
+                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://console.aero.com", "_blank"); }}>Console</p></li>
+                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://coin.aero.com", "_blank"); }}>Coin</p></li>
+                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://support.aero.com", "_blank"); }}>Support</p></li>
                 <li><p className="dropdown-item" onClick={handleLogout}>Logout</p></li>
               </ul>
             </div>

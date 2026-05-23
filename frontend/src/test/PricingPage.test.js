@@ -20,7 +20,7 @@ describe('Pricing Page', () => {
         expect(screen.getByRole('heading', { name: /Free direct MF/i })).toBeInTheDocument();
 
         // From OpenAccount
-        expect(screen.getByRole('heading', { name: /Open an Echo Account/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /Open an Aero Account/i })).toBeInTheDocument();
 
         // From Brokerage
         expect(screen.getByRole('heading', { name: /Brokerage calculator/i })).toBeInTheDocument();

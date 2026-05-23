@@ -23,7 +23,7 @@ describe('Footer component', () => {
         expect(screen.getByText('Account')).toBeInTheDocument();
 
         // Check for copyright text
-        expect(screen.getByText(/2010 - 2026, Echo Broking Ltd/i)).toBeInTheDocument();
+        expect(screen.getByText(/2010 - 2026, Aero Broking Ltd/i)).toBeInTheDocument();
 
         // Check for a few links in each section
         const openDematLink = screen.getByRole('link', { name: /Open demat account/i });

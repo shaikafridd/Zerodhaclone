@@ -9,7 +9,7 @@ function Awards() {
                 </div>
                 <div className='col-12 col-md-6 p-3 p-md-5 mt-4 mt-md-0'>
                     <h1 className='fs-2 fw-semibold mb-3'>Largest Stock Broker In India</h1>
-                    <p className='mb-4 text-muted'>2+ Million Echo Clients Contribute To Over 15% Of All Retail Order Volumes In India Daily By Trading And Investing In: </p>
+                    <p className='mb-4 text-muted'>2+ Million Aero Clients Contribute To Over 15% Of All Retail Order Volumes In India Daily By Trading And Investing In: </p>
                     <div className='row'>
                         <div className='col-6'>
                             <ul className='text-muted' style={{ lineHeight: "2.5" }}>

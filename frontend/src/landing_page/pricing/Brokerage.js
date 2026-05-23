@@ -5,7 +5,7 @@ function Brokerage() {
         <div className="container p-5 mt-5 border-top">
             <div className="row mt-5 mb-5">
                 <div className="col-md-8 mb-4">
-                    <h3 className="fs-5 mb-4"><a href="https://echo.com/brokerage-calculator" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#387ed1' }}>Brokerage calculator</a></h3>
+                    <h3 className="fs-5 mb-4"><a href="https://aero.com/brokerage-calculator" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#387ed1' }}>Brokerage calculator</a></h3>
                     <ul className="text-muted" style={{ lineHeight: '2.5', fontSize: '14px', listStyleType: 'circle' }}>
                         <li>Call & Trade and RMS auto-squareoff: Additional charges of ₹50 + GST per order.</li>
                         <li>Digital contract notes will be sent via e-mail.</li>
@@ -16,7 +16,7 @@ function Brokerage() {
                     </ul>
                 </div>
                 <div className="col-md-4 mb-4">
-                    <h3 className="fs-5 mb-4"><a href="https://echo.com/charges" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#387ed1' }}>List of charges</a></h3>
+                    <h3 className="fs-5 mb-4"><a href="https://aero.com/charges" target="_blank" rel="noopener noreferrer" className="text-decoration-none" style={{ color: '#387ed1' }}>List of charges</a></h3>
                 </div>
             </div>
         </div>
