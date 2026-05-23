@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './index.css';
-import HomePage from './frontend/src/landing_page/home/HomePage';
-import Signup from './frontend/src/landing_page/signup/Signup';
-import AboutPage from './frontend/src/landing_page/about/AboutPage';
-import ProductPage from './frontend/src/landing_page/product/ProductPage';
-import Pricingpage from './frontend/src/landing_page/pricing/Pricingpage';
-import Supportpage from './frontend/src/landing_page/support/Supportpage';
-import NotFound from './frontend/src/NotFound';
-import Navbar from './frontend/src/Navbar';
-import Footer from './frontend/src/Footer';
+import HomePage from './landing-page/src/landing_page/home/HomePage';
+import Signup from './landing-page/src/landing_page/signup/Signup';
+import AboutPage from './landing-page/src/landing_page/about/AboutPage';
+import ProductPage from './landing-page/src/landing_page/product/ProductPage';
+import Pricingpage from './landing-page/src/landing_page/pricing/Pricingpage';
+import Supportpage from './landing-page/src/landing_page/support/Supportpage';
+import NotFound from './landing-page/src/NotFound';
+import Navbar from './landing-page/src/Navbar';
+import Footer from './landing-page/src/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

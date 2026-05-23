@@ -10,7 +10,7 @@ This project is organized as a monorepo consisting of three core modules:
 
 ```text
 Aero/
-├── frontend/        # Marketing & Informational Website (Aero Main Website)
+├── landing-page/    # Marketing & Informational Website (Aero Main Website)
 ├── dashboard/       # Interactive Trading Platform (Aero Dashboard)
 ├── backend/         # Express.js & MongoDB Server (REST API, DB Models, Authentication)
 └── index.js         # Core entry points and helper configuration
@@ -93,7 +93,7 @@ npm start
 
 #### 🔵 Terminal 2: Marketing Frontend
 ```bash
-cd frontend
+cd landing-page
 npm install
 npm start
 ```
