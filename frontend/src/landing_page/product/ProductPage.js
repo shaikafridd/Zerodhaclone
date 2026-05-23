@@ -11,8 +11,8 @@ function ProductPage() {
             <div id="products">
                 <Leftimage 
                     imageURL="media/images/kite.png" 
-                    productName="Kite" 
-                    productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Kite experience seamlessly on your Android and iOS devices." 
+                    productName="Echo" 
+                    productDescription="Our ultra-fast flagship trading platform with streaming market data, advanced charts, an elegant UI, and more. Enjoy the Echo experience seamlessly on your Android and iOS devices." 
                     tryDemo="#" 
                     learnMore="#" 
                     googlePlay="#" 
@@ -21,8 +21,8 @@ function ProductPage() {
             </div>
             <Rightimage 
                 imageURL="media/images/console.png" 
-                productName="Console" 
-                productDescription="The central dashboard for your Zerodha account. Gain insights into your trades and investments with in-depth reports and visualisations." 
+                productName="Echo Console" 
+                productDescription="The central dashboard for your Echo account. Gain insights into your trades and investments with in-depth reports and visualisations." 
                 learnMore="#" 
             />
             <Leftimage 
@@ -36,7 +36,7 @@ function ProductPage() {
             />
             <Rightimage 
                 imageURL="media/images/kiteconnect.png" 
-                productName="Kite Connect API" 
+                productName="Echo Connect API" 
                 productDescription="Build powerful trading platforms and experiences with our super simple HTTP/JSON APIs. If you are a startup, build your investment app and showcase it to our clientbase." 
                 learnMore="#" 
             />
@@ -49,7 +49,7 @@ function ProductPage() {
                 googlePlay="#" 
                 appStore="#" 
             />
-            <p className='text-center mt-5 mb-5 fs-4'>Want to know more about our technology stack? Check out the <a href="https://zerodha.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration:"none"}}>Zerodha.tech</a> blog.</p>
+            <p className='text-center mt-5 mb-5 fs-4'>Want to know more about our technology stack? Check out the <a href="https://echo.tech" target="_blank" rel="noopener noreferrer" style={{textDecoration:"none"}}>Echo.tech</a> blog.</p>
             <Universe />
         </>
     );

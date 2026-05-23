@@ -15,7 +15,7 @@ describe('Navbar component', () => {
         // Check for Logo image and its alt text
         const logoImage = screen.getByAltText('logo');
         expect(logoImage).toBeInTheDocument();
-        expect(logoImage).toHaveAttribute('src', 'media/images/logo.svg');
+        expect(logoImage).toHaveAttribute('src', 'media/images/logo.png');
 
         // Check for links
         const aboutLink = screen.getByRole('link', { name: /About/i });

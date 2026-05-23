@@ -53,7 +53,7 @@ const Menu = () => {
 
   return (
     <div className="menu-container">
-      <img src="https://kite.zerodha.com/static/images/kite-logo.svg" alt="logo" className="logo" />
+      <img src="/logo.png" alt="logo" className="logo" />
       
       <button 
         className="mobile-hamburger-btn" 
@@ -105,9 +105,9 @@ const Menu = () => {
             <div className="profile-dropdown">
               <ul>
                 <li><p className="dropdown-item" onClick={handleProfileMenuClick}>My profile / Settings</p></li>
-                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://console.zerodha.com", "_blank"); }}>Console</p></li>
-                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://coin.zerodha.com", "_blank"); }}>Coin</p></li>
-                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://support.zerodha.com", "_blank"); }}>Support</p></li>
+                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://console.echo.com", "_blank"); }}>Console</p></li>
+                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://coin.echo.com", "_blank"); }}>Coin</p></li>
+                <li><p className="dropdown-item" onClick={() => { setIsProfileDropdownOpen(false); window.open("https://support.echo.com", "_blank"); }}>Support</p></li>
                 <li><p className="dropdown-item" onClick={handleLogout}>Logout</p></li>
               </ul>
             </div>

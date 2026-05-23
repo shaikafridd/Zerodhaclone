@@ -9,7 +9,7 @@ function Hero() {
             Support Portal
           </div>
           <div className="col-md-6 text-md-end text-start fs-6">
-            <a href="https://support.zerodha.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline mx-3" style={{ textUnderlineOffset: '4px' }}>Track tickets</a>
+            <a href="https://support.echo.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline mx-3" style={{ textUnderlineOffset: '4px' }}>Track tickets</a>
           </div>
         </div>
 
@@ -28,17 +28,17 @@ function Hero() {
               </span>
             </div>
             <div className="d-flex flex-wrap gap-4 mt-4" style={{ fontSize: '15px' }}>
-              <a href="https://support.zerodha.com/category/account-opening" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Track account opening</a>
-              <a href="https://support.zerodha.com/category/your-zerodha-account/login-credentials" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Track segment activation</a>
-              <a href="https://zerodha.com/margin-calculator/" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Intraday margins</a>
-              <a href="https://kite.trade/docs/kite/" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Kite user manual</a>
+              <a href="https://support.echo.com/category/account-opening" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Track account opening</a>
+              <a href="https://support.echo.com/category/your-echo-account/login-credentials" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Track segment activation</a>
+              <a href="https://echo.com/margin-calculator/" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Intraday margins</a>
+              <a href="https://echo.trade/docs/echo/" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Echo user manual</a>
             </div>
           </div>
           <div className="col-md-5 p-md-4 ps-md-5 mt-4 mt-md-0">
             <h2 className="fs-4 mb-4 fw-normal">Featured</h2>
             <ol className="ms-3" style={{ lineHeight: '2.2' }}>
-              <li><a href="https://support.zerodha.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Surveillance measure on scrips - May 2024</a></li>
-              <li className="mt-3"><a href="https://support.zerodha.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Latest Intraday leverages and Square-off timings</a></li>
+              <li><a href="https://support.echo.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Surveillance measure on scrips - May 2024</a></li>
+              <li className="mt-3"><a href="https://support.echo.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline" style={{ textUnderlineOffset: '4px' }}>Latest Intraday leverages and Square-off timings</a></li>
             </ol>
           </div>
         </div>

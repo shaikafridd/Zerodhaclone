@@ -64,11 +64,11 @@ describe('ProductPage and its Subcomponents', () => {
 
     test('renders Universe component successfully', () => {
         render(<Universe />);
-        expect(screen.getByRole('heading', { name: /The Zerodha Universe/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /The Echo Universe/i })).toBeInTheDocument();
         expect(screen.getByAltText('Smallcase')).toBeInTheDocument();
         expect(screen.getByAltText('Streak')).toBeInTheDocument();
         expect(screen.getByAltText('Sensibull')).toBeInTheDocument();
-        expect(screen.getByAltText('Zerodha Fundhouse')).toBeInTheDocument();
+        expect(screen.getByAltText('Echo Fundhouse')).toBeInTheDocument();
         expect(screen.getByAltText('GoldenPi')).toBeInTheDocument();
         expect(screen.getByAltText('Ditto')).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /Sign Up Now/i })).toBeInTheDocument();
@@ -78,12 +78,12 @@ describe('ProductPage and its Subcomponents', () => {
         render(<ProductPage />);
         // Check if various product sections are all rendered on the main page
         expect(screen.getByRole('heading', { name: /Technology/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /^Kite$/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /^Console$/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /^Echo$/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /^Echo Console$/i })).toBeInTheDocument();
         expect(screen.getByRole('heading', { name: /^Coin$/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /^Kite Connect API$/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /^Echo Connect API$/i })).toBeInTheDocument();
         expect(screen.getByRole('heading', { name: /^Varsity mobile$/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /The Zerodha Universe/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /The Echo Universe/i })).toBeInTheDocument();
         expect(screen.getByText(/Want to know more about our technology stack?/i)).toBeInTheDocument();
     });
 });

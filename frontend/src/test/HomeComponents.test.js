@@ -54,6 +54,6 @@ describe('Home Page Sub-Components', () => {
         expect(screen.getByRole('heading', { name: /Customer-First Always/i })).toBeInTheDocument();
         expect(screen.getByRole('heading', { name: /No spam or gimmicks/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /Explore Our Products/i })).toHaveAttribute('href', '/product');
-        expect(screen.getByRole('link', { name: /Try Kite Demo/i })).toHaveAttribute('href', '/signup');
+        expect(screen.getByRole('link', { name: /Try Echo Demo/i })).toHaveAttribute('href', '/signup');
     });
 });

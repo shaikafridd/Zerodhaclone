@@ -8,7 +8,7 @@ describe('OpenAccount component', () => {
         render(<OpenAccount />);
         
         // Check for main heading
-        const headingElement = screen.getByRole('heading', { name: /Open A Zerodha Account/i });
+        const headingElement = screen.getByRole('heading', { name: /Open an Echo Account/i });
         expect(headingElement).toBeInTheDocument();
 
         // Check for description paragraph

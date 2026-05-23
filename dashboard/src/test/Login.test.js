@@ -30,7 +30,7 @@ describe('Login component', () => {
             </MemoryRouter>
         );
 
-        expect(screen.getByRole('heading', { name: /Login to Kite/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /Login to Echo/i })).toBeInTheDocument();
         expect(container.querySelector('input[type="email"]')).toBeInTheDocument();
         expect(container.querySelector('input[type="password"]')).toBeInTheDocument();
         expect(screen.getByRole('button', { name: /Login/i })).toBeInTheDocument();

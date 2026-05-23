@@ -15,7 +15,7 @@ describe('Footer component', () => {
         // Check for Logo image in footer
         const logoImage = screen.getByAltText('logo');
         expect(logoImage).toBeInTheDocument();
-        expect(logoImage).toHaveAttribute('src', 'media/images/logo.svg');
+        expect(logoImage).toHaveAttribute('src', 'media/images/logo.png');
 
         // Check for column headers/text
         expect(screen.getByText('Company')).toBeInTheDocument();
@@ -23,7 +23,7 @@ describe('Footer component', () => {
         expect(screen.getByText('Account')).toBeInTheDocument();
 
         // Check for copyright text
-        expect(screen.getByText(/2010 - 2026, Zerodha Broking Ltd/i)).toBeInTheDocument();
+        expect(screen.getByText(/2010 - 2026, Echo Broking Ltd/i)).toBeInTheDocument();
 
         // Check for a few links in each section
         const openDematLink = screen.getByRole('link', { name: /Open demat account/i });

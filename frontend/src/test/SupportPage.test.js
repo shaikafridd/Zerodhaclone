@@ -19,7 +19,7 @@ describe('SupportPage and its Subcomponents', () => {
         expect(screen.getByRole('link', { name: /Track account opening/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /Track segment activation/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /Intraday margins/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /Kite user manual/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /Echo user manual/i })).toBeInTheDocument();
 
         expect(screen.getByRole('heading', { name: /Featured/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /Surveillance measure on scrips - May 2024/i })).toBeInTheDocument();
@@ -33,11 +33,11 @@ describe('SupportPage and its Subcomponents', () => {
         
         // Topics Check
         expect(screen.getByRole('heading', { name: /Account Opening/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /Your Zerodha Account/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /Your Echo Account/i })).toBeInTheDocument();
         expect(screen.getByRole('heading', { name: /Trading and Markets/i })).toBeInTheDocument();
         expect(screen.getByRole('heading', { name: /Funds/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /Console/i })).toBeInTheDocument();
-        expect(screen.getByRole('heading', { name: /Coin/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /Echo Console/i })).toBeInTheDocument();
+        expect(screen.getByRole('heading', { name: /Echo Coin/i })).toBeInTheDocument();
 
         // Sublinks Check
         expect(screen.getByRole('link', { name: /Getting started/i })).toBeInTheDocument();
@@ -45,7 +45,7 @@ describe('SupportPage and its Subcomponents', () => {
         expect(screen.getByRole('link', { name: /Trading FAQs/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /Fund withdrawal/i })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /IPO/i })).toBeInTheDocument();
-        expect(screen.getByRole('link', { name: /Understanding mutual funds and Coin/i })).toBeInTheDocument();
+        expect(screen.getByRole('link', { name: /Understanding mutual funds and Echo Coin/i })).toBeInTheDocument();
     });
 
     test('renders Supportpage composition successfully', () => {

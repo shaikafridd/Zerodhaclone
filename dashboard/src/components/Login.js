@@ -65,13 +65,13 @@ const Login = () => {
     <div className="auth-page">
       <div className="auth-split">
         <div className="auth-left">
-          <h1 className="auth-logo">Kite</h1>
+          <h1 className="auth-logo">Echo</h1>
           <h2>Invest in everything</h2>
           <p>Online platform to invest in stocks, derivatives, mutual funds, and more</p>
         </div>
         <div className="auth-right">
           <div className="auth-form-container">
-            <h2>{isSignup ? "Create Account" : "Login to Kite"}</h2>
+            <h2>{isSignup ? "Create Account" : "Login to Echo"}</h2>
             <p className="auth-subtitle">
               {isSignup ? "Join millions of smart investors today." : "Welcome back! Please enter your details."}
             </p>
